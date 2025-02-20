@@ -29,31 +29,6 @@ def main():
     prompt = st.text_input("Enter the prompt:")
     url = f"https://pollinations.ai/p/{prompt}?width={width}&height={height}&seed={seed}&model={model}"
     
-    # if st.button("Generate Image"):
-    #     if url:
-    #         image = fetch_image(url)
-    #         if image:
-    #             st.image(image, caption="Generate Image", use_column_width=True)
-    #     else:
-    #         st.warning("Please enter a valid URL")
-
-
-
-    # if st.button("Generate Image"):
-    #     start_time = time.time()
-        
-    #     if url:
-    #         image = fetch_image(url)
-    #         if image:
-    #             end_time = time.time()
-    #             elapsed_time = end_time - start_time
-    #             st.image(image, caption="Generated Image", use_column_width=True)
-    #             st.write(f"Image generated in {elapsed_time:.2f} seconds")
-    #     else:
-    #         st.warning("Please enter a valid URL")
-
-
-
 
     if st.button("Generate Image"):
         start_time = time.time()
@@ -71,11 +46,6 @@ def main():
         elapsed_time = time.time() - start_time
         timer_placeholder.write(f"Total time taken: {elapsed_time:.2f} seconds")
         st.image(image, caption="Generated Image", use_column_width=True)
-
-
-
-    
-
 
 
 if __name__ == "__main__":
