@@ -45,7 +45,8 @@ def main():
         
         elapsed_time = time.time() - start_time
         timer_placeholder.write(f"Total time taken: {elapsed_time:.2f} seconds")
-        st.image(image, caption="Generated Image", use_column_width=True)
+        # st.image(image, caption="Generated Image", use_column_width=True)
+        st.image(image, caption="Generated Image", use_container_width=True)
 
 
 if __name__ == "__main__":
